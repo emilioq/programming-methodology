@@ -1,0 +1,19 @@
+The general tree was achieved using a vector to push back child nodes and recursion methods
+
+When inserting a node, we are basically pushing in that node into the parent's
+children vector. If the given parent is null, then we check if it's the start node.
+If it isn't, then we throw an exception.
+
+When printing out a node, we check for one thing: if it has children or not.
+If it does have children then we print a paranthesis and print its children's values, 
+then close the paranthesis. If the children themselves have children as well, we simply do recursion.
+
+Copying a tree is done by keeping track of the nodes using a vector. We need to keep track
+of nodes with children because when recursion occurs and a child has children, 
+we need to go back to the previous parent node after we go through that child's children
+in order to insert properly. If we don't, then the program will insert nodes into the wrong parent.
+We use a vector similarily to a stack to keep track where we are in the tree to prevent incorrect
+insertions.
+
+Clear is done with recursion. We go through the tree until we reach a leaf node then delete that node
+and repeat until all nodes are deleted.

@@ -1,0 +1,21 @@
+This program implements a polynomial ADT. The polynomial class is based on a vector (to store coefficients)
+and an int (to store the polynomial's power/degree).
+
+The readFromUser function enables the user to input a polynomial. This is made up of two while statements, 
+one asking for the degree and the other asking for its coefficients. Stringstream is used to see if the input
+can be stored (must be an int). If it can't store the int to its desired place, it loops back saying there is an error. 
+The same is true for inputting coefficients.
+
+Printing the polynomial is simply reading the coefficients that are stored into the vector and coutting the syntax of the
+polynomial such as "+" signs and "X^power" based on our data. The location of the coefficients in the vector determines its 
+power.
+
+The most complex function is adding polynomials. This is based on 3 situations: if one vector is larger then the other,
+or both being equal. This is important because of the placements of the coefficients in the vector. If, let's say, one
+vector is of degree 3, while the other is of degree 2, The first element of the vector for degree 3 is the coefficient for X^3,
+while the other vector for degree 2's first element is for the coefficient for x^2. In order to fix this, we need to determine an
+offset of the two, then store the larger vector's elements first until we arrive at a power where both vectors contain matching
+coefficients in which then we add and store into the resulting vector.
+
+The other functions are short and self-explanatory, most of which is gathered data already inputted from the user, 
+or manipulating the coefficient vectors by multiplying each element / editing a single element.

@@ -1,0 +1,49 @@
+[Problem 1] Matrix Multiplication
+
+The user is asked the size of both matrices. This data is stored for multiple uses such as checking if
+the matrices can multiply and also the size of the resulting matrix.
+
+The user then has to input each row of matrix 1 then 2. The input is stored into the matrix by pushing
+back the number inside the current rows vector. If the user puts in too little or too much numbers, 
+the user must re-input the row. Once the two matrices are completed, they are multiplied using a triple
+nested for loop. The program then prints the first, second, and resulting matrix.
+
+_______________________________________________________________________________________
+
+[Problem 2] File I/Os
+
+
+The two inputted files first go through a series of tests to see if its valid and usable.
+(If it exists/able to load. If it contains numbers only. If the numbers are sorted)
+
+Once it passes all tests, the merge function is called. It firsts gets the first numbers
+of both files using getline and stringstream. Then it goes through a number of comparisons.
+If one number is smaller than the other, than that number is written in the merged file and
+the next number in the file replaces the current number that was compared. The same thing happens
+when both numbers are equal. This goes on until one of the files reaches the end of its data, then 
+the rest of the other file is read and written to the merged file. 
+
+Lastly, the user is notified that the merged file has been created.
+
+
+_______________________________________________________________________________________
+
+[Problem 3] Random Accesses to a File
+
+
+This program first saves the numbers beyond the 6000th integer into a vector, 
+else they would be overwritten by insertion. This is achived using seekg() and
+a while loop.
+
+After saving the numbers, the numbers 7777 through 7781 are inserted into place using 
+seekp() and a for loop. The saved vector is then read and used to insert the numbers 
+after, so now 7777-7781 are between the 6000th and 6001st integer. 
+
+One problem, is that some integers have leading zeroes. When inserting the numbers 
+into a vector then spitting it back to the text file, the resulting number will lose the 
+leading zeroes in the process. 
+
+ex. 0075 -> 75
+
+This will give the txt file a scattered appearance. 
+width() and fill() are used to solve this, giving the txt file its original uniform alignment.
