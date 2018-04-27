@@ -1,6 +1,6 @@
 # Programming Methodology
 
-These are all the course assignment I have done for "Programming Methodology", a class which covers the following:  
+These are all the course assignment I have done for "Programming Methodology" in Fall 2015, a class which covers the following:  
   
 • Object-oriented problem solving  
 • Introduction to advanced concepts in C++  
